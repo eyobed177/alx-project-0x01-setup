@@ -3,7 +3,7 @@ import UserCard from "@/components/common/UserCard";
 import { UserProps } from "@/interfaces";
 
 interface UsersPageProps {
-  posts: UserProps[];
+  posts: UserProps[]; // it's called "posts" even though it's users
 }
 
 const Users: React.FC<UsersPageProps> = ({ posts }) => {

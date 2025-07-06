@@ -1,4 +1,4 @@
-import { UserData, UserModalProps } from "@/interfaces";
+import { UserData, UserModalProps,UserProps } from "@/interfaces";
 import React, { useState } from "react";
 
 const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
@@ -36,10 +36,11 @@ const UserModal: React.FC<UserModalProps> = ({ onClose, onSubmit }) => {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSubmit(user);
-    onClose();
-  };
+  e.preventDefault();
+  onSubmit(user as UserProps);
+  onClose();
+};
+
 
   return (
     <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
